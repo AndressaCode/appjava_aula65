@@ -25,7 +25,23 @@ public class Program {
         System.out.println("Quantidade em estoque: ");
         product.quantity = sc.nextInt();
         
-        System.out.println(product.toString());
+        System.out.println("Product data " + product);
+        
+        System.out.print("Informe quantidade do produto para ser adicionado "
+                + "ao estoque: ");
+        int quantity = sc.nextInt();
+        product.addProducts(quantity);
+        
+        System.out.println();
+        System.out.println("Updated data " + product);
+        
+        System.out.println();
+        System.out.print("Informe numero de produtos para remover do estoque:");
+        quantity = sc.nextInt();
+        product.removeProducts(quantity);
+        
+        System.out.println();
+        System.out.println("Updated data: " + product);
         
         sc.close();
     }
